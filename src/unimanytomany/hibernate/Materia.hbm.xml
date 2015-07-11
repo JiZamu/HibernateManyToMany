@@ -5,7 +5,11 @@
   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-
-  
-
+    <class name="unimanytomany.model.Materia" table="MATERIAS">
+        <id name="idMateria" column="ID_MATERIA">
+            <generator class="identity"/>
+        </id>
+        
+        <property name="nombre" column="NOMBRE"/>
+    </class>
 </hibernate-mapping>

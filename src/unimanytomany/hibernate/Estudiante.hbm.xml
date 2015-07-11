@@ -5,7 +5,17 @@
   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-
-  
-
+    <class name="unimanytomany.model.Estudiante" table="ESTUDIANTES">
+        <id name="idEstudiante" column="ID_ESTUDIANTE">
+            <generator class="identity"/>
+        </id>
+        
+        <property name="nombre"/>
+        
+        <list name="materias" table="ESTUDIANTES_MATERIAS" cascade="all-delete-orphan">
+            <key column="ID_ESTUDIANTE"/>
+            <list-index column="ORDEN"/>
+            <many-to-many class="unimanytomany.model.Materia" column="ID_MATERIA"/>
+        </list>
+    </class>
 </hibernate-mapping>
