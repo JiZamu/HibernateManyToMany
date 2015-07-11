@@ -10,7 +10,10 @@
     <property name="show_sql">true</property>
     <property name="hbm2ddl.auto">create-drop</property>
     
+    <!--
     <mapping resource="unimanytomany/hibernate/Materia.hbm.xml"/>
     <mapping resource="unimanytomany/hibernate/Estudiante.hbm.xml"/>
+    -->
+    
   </session-factory>
 </hibernate-configuration>
