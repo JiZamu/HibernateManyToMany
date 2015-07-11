@@ -49,12 +49,12 @@ public class UniManyToMany {
         session = HibernateUtil.getSessionFactory().openSession();
         trans = session.beginTransaction();
         Estudiante estudianteGet = (Estudiante)session.get(Estudiante.class, 1);
-//        System.out.println("Estudiante obtenido: "+estudianteGet.getNombre());
-//        List<Materia> lista = estudianteGet.getMaterias();
-//        for(Materia materia: lista){
-//            System.out.println("Materia: "+materia.getNombre());
-//        }
-//        
+        System.out.println("Estudiante obtenido: "+estudianteGet.getNombre());
+        List<Materia> lista = estudianteGet.getMaterias();
+        for(Materia materia: lista){
+            System.out.println("Materia: "+materia.getNombre());
+        }
+        
         session.delete(estudianteGet);
         trans.commit();
         session.close();

@@ -14,6 +14,7 @@
     <mapping resource="unimanytomany/hibernate/Materia.hbm.xml"/>
     <mapping resource="unimanytomany/hibernate/Estudiante.hbm.xml"/>
     -->
-    
+    <mapping class="unimanytomany.model.Materia"/>
+    <mapping class="unimanytomany.model.Estudiante"/>
   </session-factory>
 </hibernate-configuration>
